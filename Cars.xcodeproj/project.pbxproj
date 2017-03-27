@@ -13,6 +13,8 @@
 		AC235DB41E89C8E8006A01F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC235DB31E89C8E8006A01F2 /* Assets.xcassets */; };
 		AC235DB71E89C8E8006A01F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC235DB51E89C8E8006A01F2 /* LaunchScreen.storyboard */; };
 		AC235DBF1E89C952006A01F2 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235DBE1E89C952006A01F2 /* CarsTableViewController.swift */; };
+		AC235DC11E89CB9E006A01F2 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235DC01E89CB9E006A01F2 /* REST.swift */; };
+		AC235DC31E89CF27006A01F2 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC235DC21E89CF27006A01F2 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AC235DB61E89C8E8006A01F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC235DB81E89C8E8006A01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC235DBE1E89C952006A01F2 /* CarsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTableViewController.swift; sourceTree = "<group>"; };
+		AC235DC01E89CB9E006A01F2 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		AC235DC21E89CF27006A01F2 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				AC235DAE1E89C8E7006A01F2 /* ViewController.swift */,
 				AC235DB01E89C8E8006A01F2 /* Main.storyboard */,
 				AC235DBE1E89C952006A01F2 /* CarsTableViewController.swift */,
+				AC235DC01E89CB9E006A01F2 /* REST.swift */,
+				AC235DC21E89CF27006A01F2 /* Car.swift */,
 				AC235DB31E89C8E8006A01F2 /* Assets.xcassets */,
 				AC235DB51E89C8E8006A01F2 /* LaunchScreen.storyboard */,
 				AC235DB81E89C8E8006A01F2 /* Info.plist */,
@@ -141,7 +147,9 @@
 			files = (
 				AC235DAF1E89C8E7006A01F2 /* ViewController.swift in Sources */,
 				AC235DBF1E89C952006A01F2 /* CarsTableViewController.swift in Sources */,
+				AC235DC31E89CF27006A01F2 /* Car.swift in Sources */,
 				AC235DAD1E89C8E7006A01F2 /* AppDelegate.swift in Sources */,
+				AC235DC11E89CB9E006A01F2 /* REST.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
