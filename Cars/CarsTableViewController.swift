@@ -32,7 +32,7 @@ class CarsTableViewController: UITableViewController {
             if let cars = cars {
                 // Existe
                 self.dataSource = cars
-                tableView.reloadData() // cause it's async || ATENÇÃO!!!!
+                self.tableView.reloadData() // cause it's async || ATENÇÃO!!!!
             }
         }
     }
