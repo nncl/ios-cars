@@ -32,16 +32,20 @@ class CarsTableViewController: UITableViewController {
             if let cars = cars {
                 // Existe
                 self.dataSource = cars
-                self.tableView.reloadData() // cause it's async || ATENÇÃO!!!!
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData() // cause it's async || ATENÇÃO!!!! não podemos alterar um elemento visual a nao ser na main thread
+                }
             }
         }
     }
 
     // MARK: - Table view data source
 
+    // Se não houver o método abaixo por default é 1
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

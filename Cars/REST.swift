@@ -87,4 +87,55 @@ class REST {
         
         // onComplete(nil) // Volta pra lá
     }
+    
+    // POST; não vamos fazer tudo a mesma coisa, mas na pratica temos que..
+    static func saveCar(car: Car, onComplete: @escaping (Bool) -> Void) {
+        guard let url = URL(string: basePath) else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        // request.addValue("application/json", forHTTPHeaderField: "Content-Type") - já temos isso definido na session
+        
+        let carDict: [String: Any] = [
+            "brand": car.brand,
+            "name": car.name,
+            "price": car.price,
+            "gasType": car.gasType.rawValue
+        ]
+        
+        let json = try! JSONSerialization.data(withJSONObject: carDict, options: JSONSerialization.WritingOptions()) // queremos um json a partir de um object
+        
+        // Add body na requisição
+        request.httpBody = json
+        
+        session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error == nil {
+                guard let response = response as? HTTPURLResponse else {return}
+                
+                if response.statusCode == 200 {
+                    guard let data = data else {return}
+                    
+                    let json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as! [String: Any]
+                    let id = json["id"] as! String
+                    car.id = id
+                    onComplete(true)
+                }
+            }
+        }.resume()
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
