@@ -22,9 +22,11 @@ class CarsTableViewController: UITableViewController {
         loadCars()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "edit" {
+            let vc = segue.destination as! ViewController
+            vc.car = dataSource[tableView.indexPathForSelectedRow!.row]
+        }
     }
     
     func loadCars() {

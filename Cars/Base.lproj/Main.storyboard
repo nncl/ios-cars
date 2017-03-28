@@ -113,6 +113,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="7Nv-EO-3iR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -123,7 +126,7 @@
                     <navigationItem key="navigationItem" title="Carrinhos" id="Mx5-n7-9m9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OBb-Uy-OuD">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="N2R-K9-zZR"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="add" id="N2R-K9-zZR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,4 +154,7 @@
             <point key="canvasLocation" x="-858.39999999999998" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Nv-EO-3iR"/>
+    </inferredMetricsTieBreakers>
 </document>
