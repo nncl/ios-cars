@@ -160,18 +160,6 @@ class REST {
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         
-//        let carDict: [String: Any] = [
-//            "brand": car.brand,
-//            "name": car.name,
-//            "price": car.price,
-//            "gasType": car.gasType.rawValue
-//        ]
-        
-        // let json = try! JSONSerialization.data(withJSONObject: carDict, options: JSONSerialization.WritingOptions()) // queremos um json a partir de um object
-        
-        // Add body na requisição
-        //request.httpBody = json
-        
         session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
             if error == nil {
